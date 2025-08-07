@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(60 3.4% 23.5%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(60 3.4% 23.5%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(60 3.4% 23.5%);
+  --primary: hsl(122 39% 49%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(210 25% 7.8431%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(0 0% 96.9%);
+  --muted-foreground: hsl(215 20.2% 65.1%);
+  --accent: hsl(74 76% 58%);
+  --accent-foreground: hsl(60 3.4% 23.5%);
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(214.3 31.8% 91.4%);
+  --input: hsl(214.3 31.8% 91.4%);
+  --ring: hsl(122 39% 49%);
+  --radius: 1.3rem;
+  
+  /* Duolingo Colors */
+  --duolingo-green: hsl(122 80% 42%);
+  --duolingo-green-light: hsl(89 100% 48%);
+  --duolingo-blue: hsl(197 100% 54%);
+  --duolingo-red: hsl(0 100% 64%);
+  --duolingo-gold: hsl(48 100% 50%);
+  --duolingo-gray: hsl(0 0% 97%);
+  --duolingo-text: hsl(240 6% 24%);
+  --duolingo-text-light: hsl(0 0% 47%);
+  
+  /* Fonts */
+  --font-nunito: 'Nunito', sans-serif;
+  --font-sans: 'Nunito', sans-serif;
+}
+
+.dark {
+  --background: hsl(0 0% 0%);
+  --foreground: hsl(60 9.1% 97.8%);
+  --card: hsl(240 10% 3.9%);
+  --card-foreground: hsl(60 9.1% 97.8%);
+  --popover: hsl(240 10% 3.9%);
+  --popover-foreground: hsl(60 9.1% 97.8%);
+  --primary: hsl(122 39% 49%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(240 3.7% 15.9%);
+  --secondary-foreground: hsl(60 9.1% 97.8%);
+  --muted: hsl(240 3.7% 15.9%);
+  --muted-foreground: hsl(240 5% 64.9%);
+  --accent: hsl(240 3.7% 15.9%);
+  --accent-foreground: hsl(60 9.1% 97.8%);
+  --destructive: hsl(0 62.8% 30.6%);
+  --destructive-foreground: hsl(60 9.1% 97.8%);
+  --border: hsl(240 3.7% 15.9%);
+  --input: hsl(240 3.7% 15.9%);
+  --ring: hsl(122 39% 49%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-duolingo-gray text-duolingo-text;
+  }
+}
+
+@layer components {
+  .duolingo-green {
+    background-color: var(--duolingo-green);
+  }
+  
+  .duolingo-green-light {
+    background-color: var(--duolingo-green-light);
+  }
+  
+  .duolingo-blue {
+    background-color: var(--duolingo-blue);
+  }
+  
+  .duolingo-red {
+    background-color: var(--duolingo-red);
+  }
+  
+  .duolingo-gold {
+    background-color: var(--duolingo-gold);
+  }
+  
+  .text-duolingo-green {
+    color: var(--duolingo-green);
+  }
+  
+  .text-duolingo-blue {
+    color: var(--duolingo-blue);
+  }
+  
+  .text-duolingo-red {
+    color: var(--duolingo-red);
+  }
+  
+  .text-duolingo-gold {
+    color: var(--duolingo-gold);
+  }
+  
+  .text-duolingo-text {
+    color: var(--duolingo-text);
+  }
+  
+  .text-duolingo-text-light {
+    color: var(--duolingo-text-light);
+  }
+  
+  .border-duolingo-green {
+    border-color: var(--duolingo-green);
+  }
+  
+  .border-duolingo-green-light {
+    border-color: var(--duolingo-green-light);
+  }
+}
+
+@layer utilities {
+  .animate-bounce-slow {
+    animation: bounce 2s infinite;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 3s infinite;
+  }
+  
+  .lesson-path-line {
+    background: linear-gradient(180deg, var(--duolingo-green) 0%, var(--duolingo-green-light) 100%);
+  }
+}
